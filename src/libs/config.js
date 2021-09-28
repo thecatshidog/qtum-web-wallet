@@ -27,6 +27,9 @@ export default {
                 locale = language
             }
         })
+        if (locale === 'zh') {
+          locale = 'en'
+        }
         if (locale === undefined) {
             locale = 'en'
         }
