@@ -166,13 +166,13 @@ export default {
       this.uploadUrl = ''
       this.showUploadUrl = ''
       const isImage = file.type.indexOf('image/') !== -1
-      const isLimitSize = file.size / 1024 / 1024 < 10
+      const isLimitSize = file.size / 1024 / 1024 < 20
       if (!isImage) {
         this.$root.error('file type is error')
       }
 
       if (!isLimitSize) {
-        this.$root.error('file size is limit 10m')
+        this.$root.error('file size is limit 20m')
       }
       return isImage && isLimitSize
     },
